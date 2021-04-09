@@ -13,4 +13,6 @@ int main()
     information();
     cout << logicalExpression() << endl;
     cout << s_calculation();
+    cout << endl;
+    getchar();
 }

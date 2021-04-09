@@ -39,8 +39,17 @@ double s_calculation() {
     cin >> y;
     cout << "Введiть z: ";
     cin >> z;
-    S = (z + 2*pow(y,2))/(log(x - y)) + sqrt(PI * x);
-    cout << "Результат: " << S;
+    if (x < y) {
+        if (z < y) {
+            cout << "ERROR";
+        }
+    }
+    else {
+        S = (z + 2*pow(y,2))/(log(x - y)) + sqrt(PI * x);
+        cout << "Результат: " << S;
+    }
+    if (S < 0)
+        cout << "ERROR";
     return S;
 }
 
