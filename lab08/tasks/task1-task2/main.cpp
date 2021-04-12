@@ -12,7 +12,5 @@ int main()
     SetConsoleOutputCP(866);
     information();
     cout << logicalExpression() << endl;
-    cout << s_calculation();
-    cout << endl;
-    getchar();
+    s_calculation();
 }
