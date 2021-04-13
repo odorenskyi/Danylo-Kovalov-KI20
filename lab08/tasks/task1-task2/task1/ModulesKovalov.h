@@ -3,15 +3,12 @@
 
 #include <iostream>
 #include <math.h>
-
 using namespace std;
-
 string information() {
     string inf = "<<C>>Розробник: Ковальов Данило";
     cout << inf << endl;
     return inf;
 }
-
 bool logicalExpression(){
     char a = 0;
     char b = 0;
@@ -41,7 +38,6 @@ int check(int number) {
     }
     return number;
 }
-
 double s_calculation() {
     double x = 0, y = 0, z = 0, S = 0;
     const double PI = 3.141592653589793;
@@ -71,5 +67,4 @@ double s_calculation() {
     cout << "Результат: " << S;
     return S;
 }
-
 #endif // MODULESKOVALOV_H
