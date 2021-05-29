@@ -68,7 +68,6 @@ void binarySystem()
         num1 = num1 / 2;
         str = to_wstring(num2) + str;
     }
-    wcout << str << endl;
     while (str[i]) {
         if(str[i] == '0')
             counterNull++;
@@ -76,12 +75,24 @@ void binarySystem()
             counterOne++;
         i++;
     }
-    wcout << L"0 бiт: " << str[str.length() - 1] << endl;
+    wofstream f;
+    f.imbue(locale(locale(), new codecvt_utf8_utf16<wchar_t>));
+    f.open("outputText.txt", ios_base::app);
+    f << L"\n0 бiт: " << str[str.length() - 1] << endl << L"\nДвійковий код: " << str;
+    f.close();
     if (str[str.length() - 1] == '0') {
-        wcout << L"Кiлькiсть 0: " << counterNull << endl;
+        wofstream f;
+        f.imbue(locale(locale(), new codecvt_utf8_utf16<wchar_t>));
+        f.open("outputText.txt", ios_base::app);
+        f << L"\nКiлькiсть 0: " << counterNull << endl;
+        f.close();
     }
     else {
-        wcout << L"Кiлькiсть 1: " << counterOne << endl;
+        wofstream f;
+        f.imbue(locale(locale(), new codecvt_utf8_utf16<wchar_t>));
+        f.open("outputText.txt", ios_base::app);
+        f << L"\nКiлькiсть 1: " << counterOne << endl;
+        f.close();
     }
 }
 int check(int number) {
@@ -123,7 +134,11 @@ double s_calculation() {
         z = check(z);
     }
     S = (z + (2*pow(y,2)))/(log(x - y)) + sqrt(PI * x);
-    wcout << L"Результат: " << S << endl;
+    wofstream f;
+    f.imbue(locale(locale(), new codecvt_utf8_utf16<wchar_t>));
+    f.open("outputText.txt", ios_base::app);
+    f << L"Результат: " << S << endl;
+    f.close();
     return S;
 }
 #endif // MODULESKOVALOV_H

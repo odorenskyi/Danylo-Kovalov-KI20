@@ -18,7 +18,7 @@ CFLAGS        = -fno-keep-inline-dllexport -g -Wall -Wextra -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -Wextra -Wextra -fexceptions -mthreads $(DEFINES)
 INCPATH       = -I..\task -I. -IE:\QT\5.15.2\mingw81_64\mkspecs\win32-g++ 
 LINKER      =        g++
-LFLAGS        =        -Wl,-subsystem,console -mthreads
+LFLAGS        =        -static -static-libgcc -static-libstdc++ -lpthread -Wl,-subsystem,console -mthreads
 LIBS        =           
 QMAKE         = E:\QT\5.15.2\mingw81_64\bin\qmake.exe
 DEL_FILE      = del

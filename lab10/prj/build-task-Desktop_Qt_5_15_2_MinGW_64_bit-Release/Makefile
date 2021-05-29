@@ -223,6 +223,7 @@ Makefile: ../task/task.pro E:/QT/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf 
 		E:/QT/5.15.2/mingw81_64/mkspecs/features/qt_config.prf \
 		E:/QT/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf \
 		E:/QT/5.15.2/mingw81_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		E:/QT/5.15.2/mingw81_64/mkspecs/features/exclusive_builds.prf \
 		E:/QT/5.15.2/mingw81_64/mkspecs/features/toolchain.prf \
 		E:/QT/5.15.2/mingw81_64/mkspecs/features/default_pre.prf \
@@ -241,7 +242,6 @@ Makefile: ../task/task.pro E:/QT/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf 
 		E:/QT/5.15.2/mingw81_64/mkspecs/features/yacc.prf \
 		E:/QT/5.15.2/mingw81_64/mkspecs/features/lex.prf \
 		../task/task.pro \
-		.qmake.stash \
 		E:/QT/5.15.2/mingw81_64/mkspecs/features/build_pass.prf
 	$(QMAKE) -o Makefile ..\task\task.pro -spec win32-g++ "CONFIG+=qtquickcompiler"
 E:/QT/5.15.2/mingw81_64/mkspecs/features/spec_pre.prf:
@@ -397,6 +397,7 @@ E:/QT/5.15.2/mingw81_64/mkspecs/features/qt_functions.prf:
 E:/QT/5.15.2/mingw81_64/mkspecs/features/qt_config.prf:
 E:/QT/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf:
 E:/QT/5.15.2/mingw81_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 E:/QT/5.15.2/mingw81_64/mkspecs/features/exclusive_builds.prf:
 E:/QT/5.15.2/mingw81_64/mkspecs/features/toolchain.prf:
 E:/QT/5.15.2/mingw81_64/mkspecs/features/default_pre.prf:
@@ -415,7 +416,6 @@ E:/QT/5.15.2/mingw81_64/mkspecs/features/exceptions.prf:
 E:/QT/5.15.2/mingw81_64/mkspecs/features/yacc.prf:
 E:/QT/5.15.2/mingw81_64/mkspecs/features/lex.prf:
 ../task/task.pro:
-.qmake.stash:
 E:/QT/5.15.2/mingw81_64/mkspecs/features/build_pass.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\task\task.pro -spec win32-g++ "CONFIG+=qtquickcompiler"

@@ -63,7 +63,6 @@ int main()
         }
         case 'l': {
             wofstream entr;
-            int a[] = {};
             wstring str = L"Життя";
             entr.imbue(locale(locale(), new codecvt_utf8_utf16<wchar_t>));
             entr.open("inputText.txt", ios_base::app);
